@@ -4,7 +4,7 @@ import { motion } from 'motion/react'
 import { Check, Lock } from 'lucide-react'
 import { PASS_FEATURES } from '@/lib/data'
 
-export function MemberPass({ onJoinClick }: { onJoinClick: () => void }) {
+export function MemberPass({ onJoinClick }: { onJoinClick?: () => void }) {
   return (
     <div className="mx-auto grid max-w-5xl items-center gap-12 md:grid-cols-2">
       <div>

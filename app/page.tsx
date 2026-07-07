@@ -24,7 +24,7 @@ export default function Page() {
       <Stats />
       <PhotoWall />
       <section id="member-pass" className="bg-background px-4 py-28 md:py-40">
-        <MemberPass onJoinClick={() => {}} />
+        <MemberPass />
       </section>
       <PageFooter />
     </main>
