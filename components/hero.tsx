@@ -48,12 +48,12 @@ export function Hero() {
                 </motion.p>
                 <motion.span
                   style={{ opacity: subOpacity, y: subY }}
-                  className="text-base font-sans font-semibold tracking-widest uppercase text-white/90 md:text-2xl"
+                  className="text-base font-sans font-semibold tracking-widest text-white/90 md:text-2xl"
                 >
-                  Club
+                  club
                 </motion.span>
               </div>
-              <h1 className="font-serif text-[15vw] font-extrabold leading-[0.85] tracking-tight drop-shadow-lg md:text-[11vw] text-center w-full">
+              <h1 className="font-bbh-bartle text-[15vw] font-normal leading-[0.85] tracking-tight drop-shadow-lg md:text-[11vw] text-center w-full">
                 Robotics
               </h1>
             </div>
