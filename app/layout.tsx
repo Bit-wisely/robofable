@@ -1,7 +1,13 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { DM_Sans } from 'next/font/google'
+import { Baloo_2, DM_Sans } from 'next/font/google'
 import './globals.css'
+
+const heading = Baloo_2({
+  subsets: ['latin'],
+  weight: ['500', '600', '700', '800'],
+  variable: '--font-heading',
+})
 
 const body = DM_Sans({
   subsets: ['latin'],
@@ -30,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`bg-background ${body.variable}`}>
+    <html lang="en" className={`bg-background ${heading.variable} ${body.variable}`}>
       <body className="antialiased font-sans">
         {children}
         <Analytics />

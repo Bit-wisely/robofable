@@ -22,10 +22,11 @@ export default function Page() {
         </div>
       </section>
       <Stats />
-      <PhotoWall />
-      <section id="member-pass" className="bg-background px-4 py-28 md:py-40">
+      <section id="member-pass" className="bg-background px-4 py-16 md:py-24">
         <MemberPass />
       </section>
+      <div className="h-16 md:h-28 bg-background" />
+      <PhotoWall />
       <PageFooter />
     </main>
   )
