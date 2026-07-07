@@ -1,12 +1,7 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { BBH_Bartle, DM_Sans } from 'next/font/google'
+import { DM_Sans } from 'next/font/google'
 import './globals.css'
-
-const heading = BBH_Bartle({
-  subsets: ['latin'],
-  variable: '--font-heading',
-})
 
 const body = DM_Sans({
   subsets: ['latin'],
@@ -35,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`bg-background ${heading.variable} ${body.variable}`}>
+    <html lang="en" className={`bg-background ${body.variable}`}>
       <body className="antialiased font-sans">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
