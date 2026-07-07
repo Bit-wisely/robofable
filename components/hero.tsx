@@ -36,23 +36,23 @@ export function Hero() {
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-4">
           <motion.div
             style={{ scale: titleScale, opacity: titleOpacity }}
-            className="flex w-full max-w-6xl flex-col text-white"
+            className="flex w-full max-w-6xl flex-col items-center text-center text-white"
           >
             <motion.p
               style={{ opacity: subOpacity, y: subY }}
-              className="mb-1 pl-1 text-lg font-medium drop-shadow md:mb-2 md:text-2xl"
+              className="mb-2 text-lg font-medium drop-shadow md:mb-4 md:text-2xl"
             >
               Welcome to
             </motion.p>
-            <h1 className="relative font-serif text-[17vw] font-extrabold leading-[0.9] tracking-tight drop-shadow-lg md:text-[13vw]">
+            <h1 className="relative font-sans text-[15vw] font-extrabold leading-[0.9] tracking-tight drop-shadow-lg md:text-[11vw]">
               Robotics
-              <span className="absolute -top-1 right-0 text-base font-sans font-medium tracking-normal md:top-2 md:text-2xl">
+              <span className="block text-xl font-sans font-semibold tracking-widest mt-2 uppercase text-white/95 md:text-3xl">
                 Club
               </span>
             </h1>
             <motion.p
               style={{ opacity: subOpacity, y: subY }}
-              className="mt-4 self-end pr-1 text-right text-lg font-medium leading-snug drop-shadow md:text-2xl text-pretty"
+              className="mt-6 text-lg font-medium leading-snug drop-shadow md:text-2xl text-pretty"
             >
               We build the engineers
               <br />
