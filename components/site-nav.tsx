@@ -57,36 +57,38 @@ export function SiteNav({ lightHero = false, onJoinClick }: SiteNavProps) {
           <span className="sr-only">Robotics Club UCE home</span>
         </Link>
 
-        {/* Desktop links */}
-        <ul className="hidden items-center gap-7 lg:flex">
-          {NAV_LINKS.map((link) => (
-            <li key={link.label}>
-              <Link
-                href={link.href}
-                className="text-sm font-medium opacity-90 transition-opacity hover:opacity-100"
-              >
-                {link.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        {/* Desktop links and actions grouped to the top right */}
+        <div className="hidden items-center gap-8 lg:flex">
+          <ul className="flex items-center gap-7">
+            {NAV_LINKS.map((link) => (
+              <li key={link.label}>
+                <Link
+                  href={link.href}
+                  className="text-sm font-medium opacity-90 transition-opacity hover:opacity-100"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
 
-        <div className="hidden items-center gap-3 lg:flex">
-          <a
-            href={INSTAGRAM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={cn(
-              'flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition-colors',
-              isLight
-                ? 'border-white/40 hover:bg-white/10'
-                : 'border-foreground/20 hover:bg-foreground/5',
-            )}
-          >
-            <InstagramIcon className="size-4" />
-            {INSTAGRAM_HANDLE}
-          </a>
-          <JoinButton isLight={isLight} onJoinClick={onJoinClick} closeMenu={() => setMenuOpen(false)} />
+          <div className="flex items-center gap-3">
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={cn(
+                'flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition-colors',
+                isLight
+                  ? 'border-white/40 hover:bg-white/10'
+                  : 'border-foreground/20 hover:bg-foreground/5',
+              )}
+            >
+              <InstagramIcon className="size-4" />
+              {INSTAGRAM_HANDLE}
+            </a>
+            <JoinButton isLight={isLight} onJoinClick={onJoinClick} closeMenu={() => setMenuOpen(false)} />
+          </div>
         </div>
 
         {/* Mobile menu toggle */}

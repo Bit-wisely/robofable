@@ -36,23 +36,30 @@ export function Hero() {
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-4">
           <motion.div
             style={{ scale: titleScale, opacity: titleOpacity }}
-            className="flex w-full max-w-6xl flex-col items-center text-center text-white"
+            className="flex w-full max-w-6xl flex-col text-white"
           >
+            <div className="w-full">
+              <div className="flex items-end justify-between border-b border-white/20 pb-2 mb-2">
+                <motion.p
+                  style={{ opacity: subOpacity, y: subY }}
+                  className="text-lg font-medium drop-shadow md:text-2xl"
+                >
+                  Welcome to
+                </motion.p>
+                <motion.span
+                  style={{ opacity: subOpacity, y: subY }}
+                  className="text-lg font-sans font-semibold tracking-widest uppercase text-white/90 md:text-2xl"
+                >
+                  Club
+                </motion.span>
+              </div>
+              <h1 className="font-sans text-[16vw] font-extrabold leading-[0.85] tracking-tight drop-shadow-lg md:text-[12vw] text-left">
+                Robotics
+              </h1>
+            </div>
             <motion.p
               style={{ opacity: subOpacity, y: subY }}
-              className="mb-2 text-lg font-medium drop-shadow md:mb-4 md:text-2xl"
-            >
-              Welcome to
-            </motion.p>
-            <h1 className="relative font-sans text-[15vw] font-extrabold leading-[0.9] tracking-tight drop-shadow-lg md:text-[11vw]">
-              Robotics
-              <span className="block text-xl font-sans font-semibold tracking-widest mt-2 uppercase text-white/95 md:text-3xl">
-                Club
-              </span>
-            </h1>
-            <motion.p
-              style={{ opacity: subOpacity, y: subY }}
-              className="mt-6 text-lg font-medium leading-snug drop-shadow md:text-2xl text-pretty"
+              className="mt-6 self-end pr-1 text-right text-lg font-medium leading-snug drop-shadow md:text-2xl text-pretty"
             >
               We build the engineers
               <br />
