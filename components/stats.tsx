@@ -44,7 +44,7 @@ export function Stats() {
           lineHeight: '120%',
           textAlign: 'center',
         }}
-        className="text-4xl md:text-[64px] mb-12 text-foreground"
+        className="text-[37.8px] md:text-[67.2px] mb-12 text-foreground"
       >
         Only real numbers here
       </h2>
