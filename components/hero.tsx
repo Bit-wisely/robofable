@@ -36,30 +36,30 @@ export function Hero() {
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-4">
           <motion.div
             style={{ scale: titleScale, opacity: titleOpacity }}
-            className="flex w-full max-w-6xl flex-col text-white"
+            className="flex w-full max-w-6xl flex-col text-white px-2"
           >
             <div className="w-full">
-              <div className="flex items-end justify-between border-b border-white/20 pb-2 mb-2">
+              <div className="flex items-end justify-between mb-1 md:mb-3">
                 <motion.p
                   style={{ opacity: subOpacity, y: subY }}
-                  className="text-lg font-medium drop-shadow md:text-2xl"
+                  className="text-base font-medium drop-shadow md:text-2xl"
                 >
                   Welcome to
                 </motion.p>
                 <motion.span
                   style={{ opacity: subOpacity, y: subY }}
-                  className="text-lg font-sans font-semibold tracking-widest uppercase text-white/90 md:text-2xl"
+                  className="text-base font-sans font-semibold tracking-widest uppercase text-white/90 md:text-2xl"
                 >
                   Club
                 </motion.span>
               </div>
-              <h1 className="font-sans text-[16vw] font-extrabold leading-[0.85] tracking-tight drop-shadow-lg md:text-[12vw] text-left">
+              <h1 className="font-serif text-[15vw] font-extrabold leading-[0.85] tracking-tight drop-shadow-lg md:text-[11vw] text-center w-full">
                 Robotics
               </h1>
             </div>
             <motion.p
               style={{ opacity: subOpacity, y: subY }}
-              className="mt-6 self-end pr-1 text-right text-lg font-medium leading-snug drop-shadow md:text-2xl text-pretty"
+              className="mt-6 text-center text-sm font-medium leading-snug drop-shadow md:text-right md:text-2xl text-pretty md:self-end md:pr-1"
             >
               We build the engineers
               <br />

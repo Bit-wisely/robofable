@@ -40,7 +40,7 @@ export function SiteNav({ lightHero = false, onJoinClick }: SiteNavProps) {
     >
       <nav
         className={cn(
-          'mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-8 md:py-4 transition-colors duration-300',
+          'mx-auto flex w-full items-center justify-start gap-12 px-6 py-3 md:px-12 md:py-4 transition-colors duration-300',
           isLight ? 'text-white' : 'text-foreground',
         )}
         aria-label="Main navigation"
@@ -57,44 +57,43 @@ export function SiteNav({ lightHero = false, onJoinClick }: SiteNavProps) {
           <span className="sr-only">Robotics Club UCE home</span>
         </Link>
 
-        {/* Desktop links and actions grouped to the top right */}
-        <div className="hidden items-center gap-8 lg:flex">
-          <ul className="flex items-center gap-7">
-            {NAV_LINKS.map((link) => (
-              <li key={link.label}>
-                <Link
-                  href={link.href}
-                  className="text-sm font-medium opacity-90 transition-opacity hover:opacity-100"
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
+        {/* Desktop links aligned more to the left next to logo */}
+        <ul className="hidden items-center gap-7 lg:flex">
+          {NAV_LINKS.map((link) => (
+            <li key={link.label}>
+              <Link
+                href={link.href}
+                className="text-sm font-medium opacity-90 transition-opacity hover:opacity-100"
+              >
+                {link.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
 
-          <div className="flex items-center gap-3">
-            <a
-              href={INSTAGRAM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={cn(
-                'flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition-colors',
-                isLight
-                  ? 'border-white/40 hover:bg-white/10'
-                  : 'border-foreground/20 hover:bg-foreground/5',
-              )}
-            >
-              <InstagramIcon className="size-4" />
-              {INSTAGRAM_HANDLE}
-            </a>
-            <JoinButton isLight={isLight} onJoinClick={onJoinClick} closeMenu={() => setMenuOpen(false)} />
-          </div>
+        {/* Action buttons aligned to the right */}
+        <div className="hidden items-center gap-3 lg:flex ml-auto">
+          <a
+            href={INSTAGRAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={cn(
+              'flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition-colors',
+              isLight
+                ? 'border-white/40 hover:bg-white/10'
+                : 'border-foreground/20 hover:bg-foreground/5',
+            )}
+          >
+            <InstagramIcon className="size-4" />
+            {INSTAGRAM_HANDLE}
+          </a>
+          <JoinButton isLight={isLight} onJoinClick={onJoinClick} closeMenu={() => setMenuOpen(false)} />
         </div>
 
         {/* Mobile menu toggle */}
         <button
           type="button"
-          className="flex size-10 items-center justify-center rounded-full lg:hidden"
+          className="flex size-10 items-center justify-center rounded-full lg:hidden ml-auto"
           aria-expanded={menuOpen}
           aria-label={menuOpen ? 'Close menu' : 'Open menu'}
           onClick={() => setMenuOpen((v) => !v)}
@@ -173,7 +172,7 @@ function JoinButton({
   }
 
   return (
-    <Link href="/#membership" className={className} onClick={closeMenu}>
+    <Link href="/#member-pass" className={className} onClick={closeMenu}>
       Join club
     </Link>
   )
