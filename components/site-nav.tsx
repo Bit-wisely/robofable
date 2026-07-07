@@ -57,8 +57,8 @@ export function SiteNav({ lightHero = false, onJoinClick }: SiteNavProps) {
           <span className="sr-only">Robotics Club UCE home</span>
         </Link>
 
-        {/* Desktop links aligned more to the left next to logo */}
-        <ul className="hidden items-center gap-7 lg:flex">
+        {/* Desktop links aligned to the right */}
+        <ul className="hidden items-center gap-7 lg:flex ml-auto">
           {NAV_LINKS.map((link) => (
             <li key={link.label}>
               <Link
@@ -71,8 +71,8 @@ export function SiteNav({ lightHero = false, onJoinClick }: SiteNavProps) {
           ))}
         </ul>
 
-        {/* Action buttons aligned to the right */}
-        <div className="hidden items-center gap-3 lg:flex ml-auto">
+        {/* Action buttons aligned to the right next to links */}
+        <div className="hidden items-center gap-3 lg:flex">
           <a
             href={INSTAGRAM_URL}
             target="_blank"
