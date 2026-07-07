@@ -37,7 +37,7 @@ export function Stats() {
     <div className="mx-auto max-w-5xl px-4 py-12">
       <h2 
         style={{
-          fontFamily: '"DM Sans", "DM Sans Placeholder", sans-serif',
+          fontFamily: '"Majorant", sans-serif',
           fontStyle: 'normal',
           fontWeight: 700,
           letterSpacing: '-.05em',
