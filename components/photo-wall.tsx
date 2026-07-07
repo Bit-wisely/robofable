@@ -73,7 +73,7 @@ export function PhotoWall() {
       </div>
 
       {/* Mobile: swipeable strip */}
-      <div className="flex snap-x snap-mandatory gap-3 overflow-x-auto pb-2 md:hidden">
+      <div className="flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-2 md:hidden">
         {WALL_PHOTOS.slice(0, 6).map((photo, i) => (
           <button
             key={i}
