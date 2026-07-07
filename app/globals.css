@@ -1,0 +1,83 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --color-cream: var(--cream);
+  --color-plum: var(--plum);
+  --color-blush: var(--blush);
+  --font-sans: var(--font-body), system-ui, sans-serif;
+  --font-serif: var(--font-heading), system-ui, sans-serif;
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  color-scheme: light;
+  /* Cream base */
+  --background: oklch(0.972 0.012 85);
+  --foreground: oklch(0.27 0.07 300);
+  --card: oklch(0.99 0.006 85);
+  --card-foreground: oklch(0.27 0.07 300);
+  --popover: oklch(0.99 0.006 85);
+  --popover-foreground: oklch(0.27 0.07 300);
+  /* Deep plum */
+  --primary: oklch(0.27 0.07 300);
+  --primary-foreground: oklch(0.972 0.012 85);
+  --secondary: oklch(0.94 0.015 85);
+  --secondary-foreground: oklch(0.27 0.07 300);
+  --muted: oklch(0.94 0.015 85);
+  --muted-foreground: oklch(0.52 0.04 300);
+  /* Blush pink accent */
+  --accent: oklch(0.74 0.15 350);
+  --accent-foreground: oklch(0.27 0.07 300);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.27 0.07 300 / 12%);
+  --input: oklch(0.27 0.07 300 / 15%);
+  --ring: oklch(0.74 0.15 350);
+  --radius: 1rem;
+  --cream: oklch(0.972 0.012 85);
+  --plum: oklch(0.27 0.07 300);
+  --blush: oklch(0.74 0.15 350);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+::selection {
+  background: oklch(0.74 0.15 350 / 40%);
+}
