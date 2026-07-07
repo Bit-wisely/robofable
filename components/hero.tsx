@@ -42,9 +42,9 @@ export function Hero() {
               <div className="flex items-end justify-between mb-1 md:mb-3">
                 <motion.p
                   style={{ opacity: subOpacity, y: subY }}
-                  className="text-base font-medium drop-shadow md:text-2xl"
+                  className="text-base font-sans font-semibold tracking-widest text-white/90 md:text-2xl"
                 >
-                  Welcome to
+                  welcome to
                 </motion.p>
                 <motion.span
                   style={{ opacity: subOpacity, y: subY }}
@@ -53,7 +53,7 @@ export function Hero() {
                   club
                 </motion.span>
               </div>
-              <h1 className="font-bbh-bartle text-[15vw] font-normal leading-[0.85] tracking-tight drop-shadow-lg md:text-[11vw] text-center w-full">
+              <h1 className="font-bodoni-moda text-[18.75vw] font-bold leading-[0.85] tracking-tight drop-shadow-lg md:text-[13.75vw] text-center w-full">
                 Robotics
               </h1>
             </div>
