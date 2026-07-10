@@ -1,8 +1,8 @@
 'use client'
 
 import { useRef } from 'react'
-import Image from 'next/image'
 import { motion, useScroll, useTransform } from 'motion/react'
+import { OakParticlesBackground } from './oak-particles-background'
 
 export function Hero() {
   const ref = useRef<HTMLDivElement>(null)
@@ -23,14 +23,7 @@ export function Hero() {
     <div ref={ref} className="relative h-[180svh]">
       <div className="sticky top-0 h-svh overflow-hidden">
         <motion.div style={{ scale: bgScale }} className="absolute inset-0">
-          <Image
-            src="/images/hero-sky.png"
-            alt="Dreamy purple sky with a robotics laboratory on a distant hilltop"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover"
-          />
+          <OakParticlesBackground />
         </motion.div>
 
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-4">
