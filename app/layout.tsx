@@ -1,6 +1,6 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Baloo_2, DM_Sans } from 'next/font/google'
+import { Baloo_2, DM_Sans, Black_Ops_One } from 'next/font/google'
 import './globals.css'
 
 const heading = Baloo_2({
@@ -12,6 +12,12 @@ const heading = Baloo_2({
 const body = DM_Sans({
   subsets: ['latin'],
   variable: '--font-body',
+})
+
+const blackOpsOne = Black_Ops_One({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-black-ops-one',
 })
 
 export const metadata: Metadata = {
@@ -36,7 +42,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`bg-background ${heading.variable} ${body.variable}`}>
+    <html lang="en" className={`bg-background ${heading.variable} ${body.variable} ${blackOpsOne.variable}`}>
       <body className="antialiased font-sans">
         {children}
         <Analytics />

@@ -1,7 +1,6 @@
 'use client'
 
 import { useRef } from 'react'
-import Image from 'next/image'
 import { motion, useScroll, useTransform } from 'motion/react'
 
 export function Hero() {
@@ -23,13 +22,13 @@ export function Hero() {
     <div ref={ref} className="relative h-[180svh]">
       <div className="sticky top-0 h-svh overflow-hidden">
         <motion.div style={{ scale: bgScale }} className="absolute inset-0 bg-black">
-          <Image
-            src="/images/oftheoak_bg.jpg"
-            alt="Of the Oak Background"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover opacity-90"
+          <video
+            src="/bg.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="h-full w-full object-cover opacity-80"
           />
         </motion.div>
 
@@ -53,7 +52,7 @@ export function Hero() {
                   club
                 </motion.span>
               </div>
-              <h1 className="text-[18.75vw] font-bold leading-[0.85] tracking-tight drop-shadow-lg md:text-[13.75vw] text-center w-full">
+              <h1 className="font-black-ops-one text-[23.4vw] font-bold leading-[0.85] tracking-tight drop-shadow-lg md:text-[17.2vw] text-center w-full">
                 Robotics
               </h1>
             </div>
