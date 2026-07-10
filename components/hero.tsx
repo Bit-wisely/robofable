@@ -1,8 +1,8 @@
 'use client'
 
 import { useRef } from 'react'
+import Image from 'next/image'
 import { motion, useScroll, useTransform } from 'motion/react'
-import { OakParticlesBackground } from './oak-particles-background'
 
 export function Hero() {
   const ref = useRef<HTMLDivElement>(null)
@@ -22,8 +22,15 @@ export function Hero() {
   return (
     <div ref={ref} className="relative h-[180svh]">
       <div className="sticky top-0 h-svh overflow-hidden">
-        <motion.div style={{ scale: bgScale }} className="absolute inset-0">
-          <OakParticlesBackground />
+        <motion.div style={{ scale: bgScale }} className="absolute inset-0 bg-black">
+          <Image
+            src="/images/oftheoak_bg.jpg"
+            alt="Of the Oak Background"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover opacity-90"
+          />
         </motion.div>
 
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-4">
@@ -46,7 +53,7 @@ export function Hero() {
                   club
                 </motion.span>
               </div>
-              <h1 className="font-bodoni-moda text-[18.75vw] font-bold leading-[0.85] tracking-tight drop-shadow-lg md:text-[13.75vw] text-center w-full">
+              <h1 className="text-[18.75vw] font-bold leading-[0.85] tracking-tight drop-shadow-lg md:text-[13.75vw] text-center w-full">
                 Robotics
               </h1>
             </div>
